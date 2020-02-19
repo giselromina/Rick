@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css']
 })
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  public pageTitle = 'Welcome to my App, I do my best';
+  public textBody = ' Made for: Gisel Ragusa Diaz jejje';
+  public titleBody = 'Rick and Morty';
 
 }
