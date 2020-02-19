@@ -1,5 +1,5 @@
-import { WelcomeComponent } from './home/welcome/welcome.component';
-import { ShellComponent } from './home/shell/shell.component';
+import { WelcomeComponent } from './inside-routing/welcome/welcome.component';
+import { ShellComponent } from './inside-routing/shell/shell.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

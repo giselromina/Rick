@@ -18,10 +18,15 @@ import {
   MatTableModule,
   MatCheckboxModule
 } from '@angular/material';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { BlockUIModule } from 'ng-block-ui';
+import { BlockTemplateComponent } from './block-template/block-template.component';
 @NgModule({
-  declarations: [],
+  declarations:[
+    BlockTemplateComponent
+  ],
   imports: [
   CommonModule,
   MatButtonModule,
@@ -39,9 +44,14 @@ import { ReactiveFormsModule } from '@angular/forms';
   MatTooltipModule,
   MatTableModule,
   MatCheckboxModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  MatSnackBarModule,
+  MatProgressSpinnerModule,
+  BlockUIModule.forRoot({
+    template: BlockTemplateComponent
+  })
   ],
-  exports:[
+  exports: [
   ReactiveFormsModule,
   MatButtonModule,
   MatInputModule,
@@ -57,8 +67,12 @@ import { ReactiveFormsModule } from '@angular/forms';
   MatSelectModule,
   MatTooltipModule,
   MatTableModule,
-  MatCheckboxModule
-
+  MatCheckboxModule,
+  MatSnackBarModule,
+  MatProgressSpinnerModule
+  ],
+  entryComponents: [
+    BlockTemplateComponent
   ]
 })
 export class SharedModule { }

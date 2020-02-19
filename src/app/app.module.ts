@@ -5,16 +5,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent } from './home/menu/menu.component';
-import { ShellComponent } from './home/shell/shell.component';
-import { WelcomeComponent } from './home/welcome/welcome.component';
-
+import { MenuComponent } from './inside-routing/menu/menu.component';
+import { ShellComponent } from './inside-routing/shell/shell.component';
+import { WelcomeComponent } from './inside-routing/welcome/welcome.component';
+import { SideBarComponent } from './inside-routing/side-bar/side-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ShellComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
