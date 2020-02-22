@@ -1,33 +1,28 @@
-import { WelcomeComponent } from './inside-routing/welcome/welcome.component';
-import { ShellComponent } from './inside-routing/shell/shell.component';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
 const routes: Routes = [
-  {
-    path: '',
-    component: ShellComponent,
-    children: [
+
       {
-          path: 'welcome',
-          component: WelcomeComponent
+       path: '', redirectTo: 'login', pathMatch: 'full'
       },
-      {
-        path: 'characteres',
-        loadChildren: './characteres/characteres.module#CharacteresModule'
+         {
+        path: 'login',
+        loadChildren: './loggin/loggin.module#LogginModule',
+
       },
+
       {
-        path: '',
-        redirectTo: 'welcome',
-        pathMatch: 'full'
-      }
-    ]
-  }
+      path: '',
+      loadChildren: './inside-routing/inside-routing.module#InsideRoutingModule'
+      },
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [CommonModule,
+    RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

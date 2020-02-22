@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="card text-center border-primary">
+    <div class="card-header">{{pageTitle}}</div>
+    <div class="row row-cols-md-2">
+
+      <div class="col-ms-6">
+        <div class="card-body border-primary" >
+
+          <div class="card bg-light mb-3">
+            <div class="card-header border-primary">{{titleRick}}</div>
+            <div class="card-body">
+              <h5 class="card-title">{{titleBody}}</h5>
+               <img [src] ="imgUrl"class="card-img-top">
+              <p class="card-text">{{textBody}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-ms-6">
+
+        <div class="card-body " >
+          <div class="card bg-light mb-3">
+            <div class="card-header border-primary">{{loginTitle}}</div>
+            <div class="card-body">
+              <h5 class="card-title">{{loginText}}</h5>
+                <app-login-template></app-login-template>
+              <p class="card-text">{{textBody}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

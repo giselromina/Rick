@@ -24,7 +24,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BlockUIModule } from 'ng-block-ui';
 import { BlockTemplateComponent } from './block-template/block-template.component';
 @NgModule({
-  declarations:[
+  declarations: [
     BlockTemplateComponent
   ],
   imports: [
