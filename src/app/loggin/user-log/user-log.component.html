@@ -18,14 +18,13 @@
 
       </div>
       <div class="col-ms-6">
-
         <div class="card-body " >
           <div class="card bg-light mb-3">
             <div class="card-header border-primary">{{loginTitle}}</div>
             <div class="card-body">
               <h5 class="card-title">{{loginText}}</h5>
-                <app-login-template></app-login-template>
               <p class="card-text">{{textBody}}</p>
+              <button type="submit" class="btn btn-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
             </div>
           </div>
         </div>

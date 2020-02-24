@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 
-      {
-       path: '', redirectTo: 'login', pathMatch: 'full'
-      },
+      // {
+      //  path: '', redirectTo: 'login', pathMatch: 'full'
+      // },
          {
         path: 'login',
         loadChildren: './loggin/loggin.module#LogginModule',
@@ -15,7 +15,7 @@ const routes: Routes = [
 
       {
       path: '',
-      loadChildren: './inside-routing/inside-routing.module#InsideRoutingModule'
+      loadChildren: './home/home.module#HomeModule'
       },
 
 ];

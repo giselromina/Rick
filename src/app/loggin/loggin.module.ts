@@ -1,18 +1,23 @@
+import { HomeModule } from './../home/home.module';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LogginRoutingModule } from './loggin-routing.module';
 import { UserLogComponent } from './user-log/user-log.component';
-import { LoginTemplateComponent } from './login-template/login-template.component';
-import { AuthServiceService } from './auth-service.service';
+
+import { CharacteresModule } from '../home/characters/characteres.module';
+
 
 @NgModule({
-  declarations: [UserLogComponent, LoginTemplateComponent],
+  declarations: [UserLogComponent],
   imports: [
     CommonModule,
     LogginRoutingModule,
-    AuthServiceService
+    CharacteresModule,
+    HomeModule
+  ],
+  exports: [
   ]
 })
 export class LogginModule { }
