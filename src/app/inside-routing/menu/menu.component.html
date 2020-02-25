@@ -1,11 +1,42 @@
 <mat-toolbar color="primary" class="navbar mat-elevation-z5">
   <mat-toolbar-row>
-    <button type="button" aria-label="Toggle sidenav" mat-mini-fab (click)="drawer.toggle()">
+    <!-- <button type="button" aria-label="Toggle sidenav" mat-mini-fab (click)="drawer.toggle()">
       <mat-icon aria-label="Example icon-button with a heart icon">more_vert</mat-icon>
     </button>
     <span [routerLink]="['']">
       <h2 class="title"> lo que la gente llama 'amor' es sólo una reacción química</h2>
     </span>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm"></div>
+        <div class="col-sm">
+          <button [routerLink]="['profile']" type="button" class="btn btn-dark">Profile</button>
+        </div>
+        <div class="col-sm">
+          <button type="button" class="btn btn-dark">Log Out</button>
+        </div>
+      </div>
+    </div> -->
+
+    <button type="button" aria-label="Toggle sidenav" mat-mini-fab (click)="drawer.toggle()">
+      <mat-icon aria-label="Example icon-button with a heart icon">more_vert</mat-icon>
+    </button>
+     <span [routerLink]="['']">
+      <h2 class="title"> lo que la gente llama 'amor' es sólo una reacción química</h2>
+    </span>
+      <div class="container" style="margin-left: 490px;">
+  <div class="row" style="width: 100%;">
+    <div class="col-4">
+
+          <button [routerLink]="['profile']" type="button" class="btn btn-dark">Profile</button>
+        </div>
+
+    <div class="col-4">
+          <button type="button" class="btn btn-dark">Log Out</button>
+      </div>
+      </div>
+  </div>
 
   </mat-toolbar-row>
   <mat-progress-bar *ngIf="loading" class="progress-bar" mode="indeterminate" color="accent"></mat-progress-bar>
@@ -23,11 +54,21 @@
     <mat-nav-list>
 
       <h2 matSubheader>Hogwarts Magical School</h2>
-      <a mat-list-item [routerLink]="['characters/list']" (click)="drawer.toggle()"><mat-icon class="icon_menu">house</mat-icon> Houses</a>
-      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()"><mat-icon class="icon_menu">face</mat-icon>Spells</a>
-      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()"><mat-icon class="icon_menu">face</mat-icon>Magic Books</a>
-      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()"><mat-icon class="icon_menu">face</mat-icon>Patronus</a>
-      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()"><mat-icon class="icon_menu">face</mat-icon>Dumbledor Army</a>
+      <a mat-list-item [routerLink]="['characters/list']" (click)="drawer.toggle()">
+        <mat-icon class="icon_menu">house</mat-icon> Houses
+      </a>
+      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()">
+        <mat-icon class="icon_menu">face</mat-icon>Spells
+      </a>
+      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()">
+        <mat-icon class="icon_menu">face</mat-icon>Magic Books
+      </a>
+      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()">
+        <mat-icon class="icon_menu">face</mat-icon>Patronus
+      </a>
+      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()">
+        <mat-icon class="icon_menu">face</mat-icon>Dumbledor Army
+      </a>
 
     </mat-nav-list>
   </mat-sidenav>

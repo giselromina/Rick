@@ -16,7 +16,11 @@ const routes: Routes = [
 loadChildren: '../character/character.module#CharacterModule'
   },
   {
-    path:'home',
+    path: 'home/profile',
+    loadChildren: '../profile/profile.module#ProfileModule'
+  },
+  {
+    path: 'home',
     component: MenuComponent,
 
   }
