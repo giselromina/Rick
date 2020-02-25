@@ -13,12 +13,12 @@ import { MatButtonModule, MatListModule, MatGridListModule } from '@angular/mate
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { MenuComponent } from './menu/menu.component';
+
 
 
 
 @NgModule({
-  declarations: [MenuComponent],
+  declarations: [],
   imports: [
     CommonModule,
     BrowserModule,
@@ -37,7 +37,7 @@ import { MenuComponent } from './menu/menu.component';
 
   ],
   exports: [
-MenuComponent
+
   ]
 })
 export class CoreModule { }

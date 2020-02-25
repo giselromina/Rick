@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {
   MatButtonModule,
   MatInputModule,
@@ -22,7 +22,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BlockUIModule } from 'ng-block-ui';
-import { BlockTemplateComponent } from './block-template/block-template.component';
+import { BlockTemplateComponent } from './templates/block-template/block-template.component';
 @NgModule({
   declarations: [
     BlockTemplateComponent
@@ -46,6 +46,7 @@ import { BlockTemplateComponent } from './block-template/block-template.componen
   MatCheckboxModule,
   ReactiveFormsModule,
   MatSnackBarModule,
+  MatProgressBarModule,
   MatProgressSpinnerModule,
   BlockUIModule.forRoot({
     template: BlockTemplateComponent
@@ -69,7 +70,8 @@ import { BlockTemplateComponent } from './block-template/block-template.componen
   MatTableModule,
   MatCheckboxModule,
   MatSnackBarModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatProgressBarModule
   ],
   entryComponents: [
     BlockTemplateComponent
