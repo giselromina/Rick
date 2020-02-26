@@ -1,3 +1,4 @@
+
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,6 +12,7 @@ import {MenuComponent} from './menu/menu.component';
     CommonModule,
     InsideRoutingRoutingModule,
     SharedModule
+
   ]
 })
 export class InsideRoutingModule { }

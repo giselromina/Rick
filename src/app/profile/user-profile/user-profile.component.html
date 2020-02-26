@@ -1,6 +1,17 @@
-<p>user-profile works!</p>
+<div class="container ">
+    <div class="card text-center">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Profile</h5>
+          <pre *ngIf="auth.userProfile$ | async as profile">
+            <code>{{ profile | json }}</code>
+            </pre>
+      </div>
+      <div class="card-footer text-muted">
+        <button type="button" class="btn btn-warning" [routerLink]="['/home']" routerLinkActive="router-link-active">volver</button>
 
-<!--
-<pre *ngIf="auth.userProfile$ | async as profile">
-<code>{{ profile | json }}</code>
-</pre> -->
+      </div>
+    </div>
+</div>

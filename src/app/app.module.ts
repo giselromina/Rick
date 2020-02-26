@@ -11,7 +11,7 @@ import {LogginModule} from '../app/loggin/loggin.module';
 import 'hammerjs';
 import {CoreModule} from '../app/core/core.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+// import { BlockUIModule } from 'ng-block-ui';
 
 declare var Hammer: any;
 @Injectable()
@@ -33,7 +33,9 @@ export class HammerConfig extends GestureConfig {
     LogginModule,
     CoreModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    // BlockUIModule.forRoot()
+
   ],
   providers: [{
     provide: HAMMER_GESTURE_CONFIG,

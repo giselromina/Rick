@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'home/characters',
     component: MenuComponent,
-loadChildren: '../character/character.module#CharacterModule'
+    loadChildren: '../character/character.module#CharacterModule'
   },
   {
     path: 'home/profile',

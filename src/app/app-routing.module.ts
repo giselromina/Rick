@@ -3,21 +3,22 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-
+   {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
   {
     path: 'login ',
-    loadChildren: './loggin/loggin.module#LogginModule'
+    loadChildren: './loggin/loggin.module#LogginModule',
   },
+
+
   {
     path: '',
     loadChildren: './inside-routing/inside-routing.module#InsideRoutingModule',
   },
 
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
-  },
 
 ];
 
