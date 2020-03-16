@@ -1,6 +1,6 @@
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule, Injectable } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,8 +10,8 @@ import { GestureConfig } from '@angular/material';
 import {LogginModule} from '../app/loggin/loggin.module';
 import 'hammerjs';
 import {CoreModule} from '../app/core/core.module';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-// import { BlockUIModule } from 'ng-block-ui';
+
+
 
 declare var Hammer: any;
 @Injectable()
@@ -32,8 +32,7 @@ export class HammerConfig extends GestureConfig {
     ToastrModule.forRoot(),
     LogginModule,
     CoreModule,
-    ReactiveFormsModule,
-    FormsModule,
+    HttpClientModule
     // BlockUIModule.forRoot()
 
   ],

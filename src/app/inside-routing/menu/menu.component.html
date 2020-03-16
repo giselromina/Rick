@@ -1,53 +1,46 @@
-
 <block-ui>
-<mat-toolbar color="primary" class="navbar mat-elevation-z5">
-  <mat-toolbar-row>
+  <mat-toolbar color="primary" class="navbar mat-elevation-z5">
+    <mat-toolbar-row>
       <button type="button" aria-label="Toggle sidenav" mat-mini-fab (click)="drawer.toggle()">
-      <mat-icon aria-label="Example icon-button with a heart icon">more_vert</mat-icon>
-    </button>
-    <span [routerLink]="['/']">
-      <h2 class="title"> What people call “love” is just a chemical reaction </h2>
-    </span>
-    <div class="container" style="margin-left: 300px;">
-      <div class="row" style=" width: 100%;">
-        <div class="col-4">
-          <button [routerLink]="['profile']" type="button" class="btn btn-dark">Profile</button>
-        </div>
-        <div class="col-4">
-          <button type="button" class="btn btn-dark">Log Out</button>
-        </div>
+        <mat-icon aria-label="Example icon-button with a heart icon">more_vert</mat-icon>
+      </button>
+      <span [routerLink]="['/home']">
+        <h2 class="title"> What people call “LOVE” is just a chemical reaction </h2>
+      </span>
+      <nav class="container">
+          <a class="row" routerLink="profile"  style="text-decoration-color: antiquewhite; color:yellow;">Profile</a>
+
+          <a class="row" routerLink="profile"  style="text-decoration-color: antiquewhite; color:yellow;">Log-out</a>
+      </nav>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [mode]="'over'" [opened]="(isHandset$ | async)">
+      <div color="primary" class="profile-section">
       </div>
-    </div>
-  </mat-toolbar-row>
-  <mat-progress-bar *ngIf="loading" class="progress-bar" mode="indeterminate" color="accent"></mat-progress-bar>
-</mat-toolbar>
-<mat-sidenav-container class="sidenav-container">
+      <mat-nav-list>
+        <h2 matSubheader>Wubba Lubba Dub Dub</h2>
+        <a mat-list-item [routerLink]="['/characters']" (click)="drawer.toggle()">
+          <mat-icon class="icon_menu">house</mat-icon> Characters
+        </a>
+        <a mat-list-item [routerLink]="['/profile']" (click)="drawer.toggle()">
+          <mat-icon class="icon_menu">face</mat-icon>Episodes
+        </a>
+        <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()">
+          <mat-icon class="icon_menu">face</mat-icon>Phrases
+        </a>
+        <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()">
+          <mat-icon class="icon_menu">face</mat-icon>Review's
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
 
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [mode]="'over'" [opened]="(isHandset$ | async)">
-    <div color="primary" class="profile-section">
-    </div>
-    <mat-nav-list>
-      <h2 matSubheader>Wubba Lubba Dub Dub</h2>
-      <a mat-list-item [routerLink]="['characters/list']" (click)="drawer.toggle()">
-        <mat-icon class="icon_menu">house</mat-icon> Characters
-      </a>
-      <a mat-list-item [routerLink]="['profile']" (click)="drawer.toggle()">
-        <mat-icon class="icon_menu">face</mat-icon>Episodes
-      </a>
-      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()">
-        <mat-icon class="icon_menu">face</mat-icon>Phrases
-      </a>
-      <a mat-list-item [routerLink]="['']" (click)="drawer.toggle()">
-        <mat-icon class="icon_menu">face</mat-icon>Review's
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
+    <mat-sidenav-content>
+      <main class="margin-container">
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
 
-  <mat-sidenav-content>
-    <main class="margin-container">
-      <router-outlet></router-outlet>
-    </main>
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-   </block-ui>
+  </mat-sidenav-container>
+</block-ui>

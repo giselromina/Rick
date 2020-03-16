@@ -23,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BlockUIModule } from 'ng-block-ui';
 import { BlockTemplateComponent } from './templates/block-template/block-template.component';
-
+import { FormsModule } from '@angular/forms';
 import { SharedListComponent } from './shared-list/shared-list.component';
 @NgModule({
   declarations: [
@@ -51,6 +51,7 @@ import { SharedListComponent } from './shared-list/shared-list.component';
   MatSnackBarModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
+  FormsModule,
   BlockUIModule.forRoot(
     {
       template: BlockTemplateComponent
@@ -78,7 +79,8 @@ import { SharedListComponent } from './shared-list/shared-list.component';
   MatProgressSpinnerModule,
   MatProgressBarModule,
   SharedListComponent,
-  BlockUIModule
+  BlockUIModule,
+  FormsModule,
   ],
   entryComponents: [
     BlockTemplateComponent

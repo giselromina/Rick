@@ -1,1 +1,17 @@
-      <app-shared-list></app-shared-list>
+      <div class="menu">
+  <div class="selectTable">
+    <button type="button" class="btn btn-warning" id="tm" name="btnMAterial" (click)=tableSelected($event)>Table
+      Material</button>
+    <button type="button" class="btn btn-warning" id="tp" (click)=tableSelected($event)>Table Prime</button>
+  </div>
+  <div>
+    <div class="tableContainer">
+      <div id="materialTable" *ngIf="materialTable" #materialTable>
+         <app-shared-list [dataSource]="dataSource"></app-shared-list>
+      </div>
+      <div id="primeTable" *ngIf="primeTable" #primeTable>
+        <!-- <app-table-prime [dataTable]=dataSource></app-table-prime> -->
+      </div>
+    </div>
+  </div>
+</div>

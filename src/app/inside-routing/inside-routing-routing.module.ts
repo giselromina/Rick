@@ -11,12 +11,12 @@ const routes: Routes = [
   },
 
   {
-    path: 'home/characters',
+    path: 'characters',
     component: MenuComponent,
     loadChildren: '../character/character.module#CharacterModule'
   },
   {
-    path: 'home/profile',
+    path: 'profile',
     loadChildren: '../profile/profile.module#ProfileModule'
   },
   {

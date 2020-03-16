@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
+import { DataTableCharacter } from '../models/dataTableCharacter';
 @Component({
   selector: 'app-shared-list',
   templateUrl: './shared-list.component.html',
@@ -8,22 +9,25 @@ import { BlockUI, NgBlockUI } from 'ng-block-ui';
 export class SharedListComponent implements OnInit {
   constructor() { }
   @BlockUI() blockUI: NgBlockUI;
-  displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  dataSource = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }
-  ];
+  @Input() dataSource: DataTableCharacter[];
+  displayedColumns: string[];
+  listfilter: string;
+  filteredCharacters: DataTableCharacter[];
   ngOnInit() {
-this.blockUI.start();
-this.blockUI.stop();
+    this.displayedColumns = Object.keys(this.dataSource[0]);
+    this.filteredCharacters = this.dataSource;
   }
 
+  applyFilter(event?: Event): void {
+    if (event) {
+      const filterValue = (event.target as HTMLInputElement).value;
+      this.filteredCharacters = this.dataSource.filter(
+        (character: DataTableCharacter) => character.name.toLocaleLowerCase().indexOf(filterValue.toLocaleLowerCase()) !== -1);
+    } else {
+      this.filteredCharacters = this.dataSource;
+    }
+  }
+  toggleImag(btn) {
+    console.log(btn);
+  }
 }

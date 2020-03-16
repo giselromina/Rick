@@ -1,38 +1,63 @@
-<block-ui >
-<div class="card">
- <div class="card">
-    <div class="card-header">Choose One</div>
-<div class="example-container mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource">
-     <!-- CABECERAS -->
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
+<block-ui>
+  <div class="card">
+    <div class="card">
+      <div class="card-header">Choose One</div>
+      <div id="filterContainer" style="margin-left: 20px;">
+        <!-- primer metodo de filtrado -->
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event)" [ngModel]='listfilter' (ngOnchange)='listfilter'
+            placeholder="search">
+        </mat-form-field>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
+<!-- segundo metodo de filtrado getter and setters -->
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event)" [(ngModel)]='listfilter'
+            placeholder="search">
+        </mat-form-field>
+        <button type="button" class="btn btn-warning " id="showImagen" (click)=toggleImag($event)>Img</button>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
+      </div>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container>
+      <div class="container mat-elevation-z8">
+        <table mat-table [dataSource]="filteredCharacters" *ngIf="dataSource?.length">
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-</div>
-</div>
-</div>
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="specie">
+            <th mat-header-cell *matHeaderCellDef> Specie </th>
+            <td mat-cell *matCellDef="let element"> {{element.specie}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="origin">
+            <th mat-header-cell *matHeaderCellDef> Origin </th>
+            <td mat-cell *matCellDef="let element"> {{element.origin}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef> Location </th>
+            <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+          </ng-container>
+
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
 </block-ui>

@@ -1,0 +1,35 @@
+table {
+  width: 100%;
+}
+
+.selectTable {
+ text-align: center;
+ padding: 20px;
+margin: 20px;
+}
+
+#tm , #tp{
+  margin-right: 20px;
+  /* margin-left: 250px; */
+ display:inline-block;
+
+}
+.tablacontainer{
+text-align: center;
+
+}
+
+#materialTable,#primeTable{
+ padding: 20px;
+}
+.margin-container{
+  margin-top: 54px;
+}
+
+#filterContainer{
+  padding: 15px;
+  width: 200px;
+}
+#filter{
+  margin-left: 20px;
+}
