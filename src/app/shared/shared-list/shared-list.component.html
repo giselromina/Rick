@@ -5,14 +5,14 @@
       <div id="filterContainer" style="margin-left: 20px;">
         <!-- primer metodo de filtrado -->
         <mat-form-field>
-          <input matInput (keyup)="applyFilter($event)" [ngModel]='listfilter' (ngOnchange)='listfilter'
-            placeholder="search">
+          <input matInput (keyup)="filteredBy($event)" [(ngModel)]='listfilter'
+            placeholder="doble-Binding">
         </mat-form-field>
 
 <!-- segundo metodo de filtrado getter and setters -->
-        <mat-form-field>
-          <input matInput (keyup)="applyFilter($event)" [(ngModel)]='listfilter'
-            placeholder="search">
+        <mat-form-field style="margin-left: 20px;">
+          <input matInput [(ngModel)]='listfilterGS'
+            placeholder="gett-sett">
         </mat-form-field>
         <button type="button" class="btn btn-warning " id="showImagen" (click)=toggleImag($event)>Img</button>
 
