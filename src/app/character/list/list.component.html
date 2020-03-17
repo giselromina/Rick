@@ -3,11 +3,14 @@
     <button type="button" class="btn btn-warning" id="tm" name="btnMAterial" (click)=tableSelected($event)>
       Table Material</button>
     <button type="button" class="btn btn-warning" id="tp" name="btnPrime" (click)=tableSelected($event)>Table Prime</button>
+    <button type="button" class="btn btn-warning"id="sInf" name="btnCard" (click)=tableSelected($event)> ShowCard</button>
    <div id="msgMuestra" *ngIf="muestroMsjSeleccion">
     <span>Se guardardo seleccion anterior {{nameTable}}</span>
+   </div>
   </div>
-  </div>
-
+   <div class="cardInfo" *ngIf="showcard">
+      <app-show-card-inf [dataForCard]="dataToCard"></app-show-card-inf>
+   </div>
   <div>
     <div class="tableContainer">
       <div id="materialTable" *ngIf="materialTable" #materialTable>

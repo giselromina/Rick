@@ -1,0 +1,40 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{dataForCard.name}}</mat-card-title>
+    <mat-card-subtitle>Simil Human</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="../../../assets/img/rick-morty6.jpg">
+  <mat-card-content >
+
+    <div class="rowInf">
+      <label><strong> SHOW FOR ViewChild </strong></label>
+      <span>{{data}}</span>
+    </div>
+    <div class="rowInf">
+      <label><strong>Adress: </strong></label>
+      <span>{{dataForCard.adreess}}</span>
+    </div>
+    <div class="rowInf">
+      <label><strong>Birth : </strong></label>
+      <span>{{dataForCard.birth}}</span>
+    </div>
+    <div class="rowInf">
+      <label><strong>Orgns : </strong></label>
+      <span>{{dataForCard.donetaOrgans}}</span>
+    </div>
+    <div class="rowInf">
+      <label><strong>Age : </strong></label>
+      <span>{{dataForCard.edad}}</span>
+    </div>
+    <div class="rowInf">
+      <label><strong>Location : </strong></label>
+      <span>{{dataForCard.location}}</span>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>NOt PUSH-ME</button>
+    <button mat-button>PUSH-ME</button>
+  </mat-card-actions>
+
+</mat-card>

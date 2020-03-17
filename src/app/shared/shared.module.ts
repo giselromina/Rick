@@ -25,10 +25,12 @@ import { BlockUIModule } from 'ng-block-ui';
 import { BlockTemplateComponent } from './templates/block-template/block-template.component';
 import { FormsModule } from '@angular/forms';
 import { SharedListComponent } from './shared-list/shared-list.component';
+import { ShowCardInfComponent } from './show-card-inf/show-card-inf.component';
 @NgModule({
   declarations: [
     BlockTemplateComponent,
-    SharedListComponent
+    SharedListComponent,
+    ShowCardInfComponent
   ],
   imports: [
   CommonModule,
@@ -81,6 +83,7 @@ import { SharedListComponent } from './shared-list/shared-list.component';
   SharedListComponent,
   BlockUIModule,
   FormsModule,
+  ShowCardInfComponent
   ],
   entryComponents: [
     BlockTemplateComponent

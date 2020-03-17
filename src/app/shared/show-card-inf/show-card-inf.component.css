@@ -1,0 +1,20 @@
+.example-card {
+  width: 400px;
+  margin-left: 400px;
+}
+
+.example-header-image {
+  background-image: url('../../../assets/img/rick-morty11.jpg');
+  background-size: cover;
+ }
+
+.rowInf{
+
+  font-size: 15px;
+  width: auto;
+  height: 50px;
+margin-left: 10px;
+}
+span{
+  margin-left: 5px;
+}

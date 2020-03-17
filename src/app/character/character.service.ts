@@ -9,9 +9,8 @@ export class CharacterService {
 // con estas dos propiedades
 // la funcion que cumple el servicio es  para guardar
 // datos de un modulo que deseamos guardar se gestiona con getter/setter
-
 matrialTableShow: boolean;
-moreShow: string;
+cardInfo: {};
 
 private rickUrl = 'https://rickandmortyapi.com/api';
   constructor(private http: HttpClient) {

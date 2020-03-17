@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, ViewChi
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { DataTableCharacter } from '../models/dataTableCharacter';
 import { NgModel } from '@angular/forms';
+import {CharacterService} from '../../character/character.service';
 @Component({
   selector: 'app-shared-list',
   templateUrl: './shared-list.component.html',
@@ -33,7 +34,7 @@ export class SharedListComponent implements OnInit, AfterViewInit {
     this.applyFilter(this.listfilterGS);
   }
 
-  constructor() { }
+  constructor( ) { }
   @BlockUI() blockUI: NgBlockUI;
   @Input() dataSource: DataTableCharacter[];
   displayedColumns: string[];
