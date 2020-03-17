@@ -33,3 +33,11 @@ text-align: center;
 #filter{
   margin-left: 20px;
 }
+
+#msgMuestra{
+  width: 200px;
+  height: 100px;
+  margin-left: 100px;
+  border: 2px solid black;
+  padding: 15px;
+}

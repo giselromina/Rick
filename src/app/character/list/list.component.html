@@ -1,9 +1,13 @@
       <div class="menu">
   <div class="selectTable">
-    <button type="button" class="btn btn-warning" id="tm" name="btnMAterial" (click)=tableSelected($event)>Table
-      Material</button>
-    <button type="button" class="btn btn-warning" id="tp" (click)=tableSelected($event)>Table Prime</button>
+    <button type="button" class="btn btn-warning" id="tm" name="btnMAterial" (click)=tableSelected($event)>
+      Table Material</button>
+    <button type="button" class="btn btn-warning" id="tp" name="btnPrime" (click)=tableSelected($event)>Table Prime</button>
+   <div id="msgMuestra" *ngIf="muestroMsjSeleccion">
+    <span>Se guardardo la seleccion anterior {{nameTable}}</span>
   </div>
+  </div>
+
   <div>
     <div class="tableContainer">
       <div id="materialTable" *ngIf="materialTable" #materialTable>

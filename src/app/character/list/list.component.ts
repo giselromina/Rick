@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Character } from '../character';
 import { Router } from '@angular/router';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-import{CharacterService} from '../character.service';
+import { CharacterService } from '../character.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -12,17 +12,27 @@ import{CharacterService} from '../character.service';
 export class ListComponent implements OnInit {
   data: Character[];
   dataSource;
-
+  materialTable;
+  nameTable;
 
   constructor(private _characterService: CharacterService,
-    private route: Router) { }
+              private route: Router) { }
 
   @BlockUI() blockUI: NgBlockUI;
   @ViewChild('materialTable', { static: false }) material: ElementRef;
   @ViewChild('primeTable', { static: false }) prime: ElementRef;
-  materialTable: boolean;
   primeTable: boolean;
 
+// retorna el valor de lo seleccioanado una vez que se seteo el valor
+  get muestroMsjSeleccion(): boolean {
+
+    return this._characterService.matrialTableShow;
+  }
+  // establecemos el valor del parametro en el servicio una vez que se selecciono la opcion
+
+  set muestroMsjSeleccion(show: boolean) {
+    this._characterService.matrialTableShow = show;
+      }
 
   ngOnInit() {
 
@@ -62,9 +72,12 @@ export class ListComponent implements OnInit {
     this.blockUI.stop();
   }
   tableSelected(button) {
+    debugger
     if (button.toElement.name === 'btnMAterial') {
       this.materialTable = true;
       this.primeTable = false;
+      this.muestroMsjSeleccion = true;
+      this.nameTable = 'Tabla Material';
     } else {
       this.materialTable = false;
       this.primeTable = true;
