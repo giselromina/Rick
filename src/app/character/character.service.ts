@@ -6,21 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CharacterService {
+// con estas dos propiedades
+// la funcion que cumple el servicio es  para guardar
+// datos de un modulo que deseamos guardar se gestiona con getter/setter
 
-matrialTableShow:boolean;
-moreShow:string;
-
-// funcion para guardar datos de un modulo que deseamos guardar se gestiona con getter/setter
-
-public setSelectionOption( param1, param2) {
-  const selectionOption1 = param1;
-  const SelectionName1 = param2;
-
-
-  console.log(selectionOption1);
-  console.log(SelectionName1);
-
-}
+matrialTableShow: boolean;
+moreShow: string;
 
 private rickUrl = 'https://rickandmortyapi.com/api';
   constructor(private http: HttpClient) {
